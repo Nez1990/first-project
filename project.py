@@ -6,9 +6,9 @@ gender= (input("\nAre you Male or Female?\n",))
 weight= float(input("\nInput your current weight in kg:\n",))
 height= float(input("\nInput your current height in m:\n",))
 
-#2. I calculate the optimal weight range along with the BMI for the person and output it
-def optimal_BMI(height, weight):
-    BMI = weight/height**2
+#2. I calculate the optimal weight range using the height of the person and output the otpimal range weight 
+def optimal_BMI(height):
+    
     target_weight_low=18.5 * height**2
     target_weight_high=24.9 * height**2
     print (f'A healthy weight for you is between {round(target_weight_low, 2)} kg and {round(target_weight_high,2)} kg')
@@ -21,35 +21,35 @@ def calculate_my_BMI(height, weight, gender):
     if BMI<=18.5 and gender=="Male":
         print(f'\nYou are {gender} who is {height} m tall and weighing {weight} kg')
         print(f'You have a BMI of {round(BMI,2)} which is Underweight')
-        optimal_BMI(height,weight)
+        optimal_BMI(height)
         print(calorie_tips["Men"])
         
     elif BMI > 18.5 and BMI <25 and gender=="Male":
         print(f'\nYou are {gender} who is {height} m tall and weighing {weight} kg')
         print(f'You have a BMI of {round(BMI,2)} which is Normal Weight\nKeep this weight Buddy!')
-        optimal_BMI(height,weight)
+        optimal_BMI(height)
         print(calorie_tips["Men"])
     elif BMI >=25 and gender == "Male":
         print(f'\nYou are {gender} who is {height} m tall and weighing {weight} kg')
         print(f'You have a BMI of {round(BMI,2)} which is Overweight\nStop eating this much Buddy!')
-        optimal_BMI(height,weight)
+        optimal_BMI(height)
         print(calorie_tips["Men"])
 
 
     elif BMI<=18.5 and gender=="Female":
         print(f'\nYou are {gender} who is {height} m tall and weighing {weight} kg')
         print(f'You have a BMI of {round(BMI,2)} which is Underweight\nYou need to eat more Lady!')
-        optimal_BMI(height,weight)
+        optimal_BMI(height)
         print(calorie_tips["Women"])
     elif BMI > 18.5 and BMI <25 and gender=="Female":
         print(f'\nYou are {gender} who is {height} m tall and weighing {weight} kg')
         print(f'You have a BMI of {round(BMI,2)} which is Normal Weight\nKeep this weight Lady!')
-        optimal_BMI(height,weight)
+        optimal_BMI(height)
         print(calorie_tips["Women"])
     elif BMI >=25 and gender == "Female":
         print(f'\nYou are {gender} who is {height} m tall and weighing {weight} kg')
-        print(f'You have a BMI of {round(BMI,2)} which is Overweight\nStop eating this much, Lady')
-        optimal_BMI(height,weight)
+        print(f'You have a BMI of {round(BMI,2)} which is Overweight\nStop eating this much Lady')
+        optimal_BMI(height)
         print(calorie_tips["Women"])
     
     
