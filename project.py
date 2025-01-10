@@ -1,5 +1,7 @@
 #BMI Calculator
 
+# A BMI lower than 18.5 is underweight, higher than 25 is overweight, between 18.5 and 25 is normal weight 
+
 #1. I welcome the user with a print message and ask him to input his gender, weight and height which i capture as float
 print("Welcome to my BMI calculator")
 gender= (input("\nAre you Male or Female?\n",))
@@ -54,7 +56,7 @@ def calculate_my_BMI(height, weight, gender):
     
     
 
-#4. I created a function to give different tips based on the users gender from which I call the value from within the function
+#4. I created a dictionary to give different tips based on the users gender from which I call the value from within the function
 calorie_tips = {
     "Men":"As a Man you should focus on strength training to build muscles",
     "Women":"As a woman, you may have more body fat compared to men at the same BMI, so be sure to check other health markers.",
